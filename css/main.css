@@ -57,26 +57,29 @@ header h2 {
     font-weight: 200;
     max-width: 65ch;
 }
-
+.arrow{
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    transition: all 500ms ease .5s;
+}
 .arrow-btn{
     font-size: .8rem;
     border-radius: 30px;
     padding: .5em 2em;
     display: inline-flex;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 30px;
+    left: 30px;
     font-weight: 700;
     font-size: 1rem;
     transition: all .5s ease-in-out;
     cursor: pointer;
+    overflow: hidden;
 }
-.arrow-btn:hover{
-    border: 1px solid var(--shade-100);
-}
-.arrow-btn:hover.arrow{
-    display: flex;
+.arrow-btn:hover .arrow{
     margin-right: .5em;
+    bottom: 20px;
 }
 @media(min-width: 768px){
     header h1 {
@@ -89,6 +92,24 @@ header h2 {
         max-width: 65ch;
         margin: 0;
     }
+    .arrow-btn{
+        font-size: .8rem;
+        border-radius: 30px;
+        padding: .5em 3em;
+        display: inline-flex;
+        position: absolute;
+        bottom: 30px;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .arrow{
+        position: absolute;
+        bottom: -20px;
+        left: 30px;
+    }
 }
 /* THE NAV */
 
@@ -100,11 +121,12 @@ nav{
     height: 55px;
     padding: 1em 3em;
     font-family: 'Montserrat';
-    background: transparent;
+    background: #fff;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.1);
 }
 .logo{
     float: left;
@@ -372,8 +394,8 @@ nav{
     /* filter: brightness(45%) grayscale(1); */
     transition: filter 1000ms;
 }
-.about-details h3{
-    font-size: 1.3em;
+.about-details p{
+    font-size: 1.5rem;
     line-height: 1.5em;
     display: block;
     font-weight: 700;
@@ -414,8 +436,8 @@ nav{
     .about-details{
         margin-left: 3rem;
     }
-    .about-details h3{
-        font-size: 36px;
+    .about-details p{
+        font-size: 1.5rem;
         line-height: 1.7em;
         display: block;
         font-weight: 700;

@@ -49,10 +49,3 @@ scrollButton.addEventListener('click', function() {
     });
 });
 
-gsap.from('.logo', {opacity: 0, duration: 1, delay: .5, y: -10 });
-gsap.from('.burger', {opacity: 0, duration: 1, delay: 1, x: 20 });
-gsap.from('.intro-top', {opacity: 0, duration: 1, delay: 1.5, x: 200 });
-gsap.from('.arrow-btn', {opacity: 0, duration: 1, delay: 2, y: -50 });
-gsap.from('.nav-link', {opacity: 0, duration: 1, delay: 2.5, y: -45 });
-gsap.from('.head-content p', {opacity: 0, duration: 1, delay: 3, x: 10 });
-gsap.from('.head-content a', {opacity: 0, duration: 1, delay: 3.5, y: 50 });
