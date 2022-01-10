@@ -369,6 +369,10 @@ nav{
 
 
 /* About */
+#about{
+    background: #111;
+    color: #fff;
+}
 .about-content{
     padding: 5rem 0;
     margin: 3rem 0;
@@ -382,6 +386,8 @@ nav{
     height: 100%;
     box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
     /* flex: 1 1 200px; */
+    border-radius: 10px;
+    overflow: hidden;
 }
 .about-img img{
     display: block;
@@ -389,7 +395,6 @@ nav{
     height: auto;
     object-fit: cover;
     object-position: top;
-    border-radius: 10px;
     /* opacity: 0.8; */
     /* filter: brightness(45%) grayscale(1); */
     transition: filter 1000ms;
@@ -398,10 +403,9 @@ nav{
     font-size: 1.5rem;
     line-height: 1.5em;
     display: block;
-    font-weight: 700;
     text-align: center;
 }
-.about-details h3:first-child{
+.about-details p:first-child{
     font-family: "Montserrat";
     text-transform: uppercase;
     font-size: 1em;
@@ -447,6 +451,94 @@ nav{
         display: inline-block;
     }
 }
+/* Contact */
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.contact-content .link-btn {
+    border-radius: 0;
+    margin: 1.5rem 0;
+    display: block;
+    width: fit-content;
+}
+.form-container {
+    flex: 1 0 auto;
+    max-width: 600px;
+    width: 100%;
+    margin-right: 3rem;
+  }
+  
+  .input-container {
+    position: relative;
+    margin: 1.5rem 0;
+  }
+  
+  .input-container .form-input {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    caret-color: var(--shade-300);
+    border: 1px solid var(--grey-color);
+    color: var(--text-color);
+    transition: border 500ms;
+    padding: 1.75rem 1rem 0.5rem;
+    font-size: 1.15rem;
+  }
+  
+  .input-container textarea {
+    height: 300px;
+    resize: none;
+    font: inherit;
+  }
+  
+  .input-container label {
+    display: block;
+    position: absolute;
+    width: 100%;
+    font-size: 1.15rem;
+    top: 15px;
+    padding: 0.25rem 1rem;
+    color: var(--grey-text);
+    transform-origin: left;
+    user-select: none;
+    transition: all 500ms;
+  }
+  
+  .input-container .form-input:hover,
+  .input-container .form-input:focus {
+    outline: none;
+    border-color: var(--shade-300);
+  }
+  
+  .form-input:focus + label,
+  .focused label {
+    top: 0rem;
+    font-size: 0.75rem;
+    background-color: var(--shade-500);
+    color: var(--background-color);
+    user-select: auto;
+  }
+  .form-container button{
+    color: #fff;
+    margin: 1rem;
+    border-radius: 0;
+    background: #111;
+    padding: 1em;
+    transition: all .5s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border: none;
+    outline: none;
+}
+.form-container button:hover{
+    background: none;
+    border: 1px solid #111;
+    color: #111;
+}
+
 /* Footer */
 footer{
     background: #111;
