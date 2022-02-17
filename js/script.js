@@ -6,6 +6,8 @@ const scrollButton = document.querySelector('.arrow-btn');
 const main = document.querySelector("main");
 const navtab =  document.getElementsByTagName("nav");
 const inputs = document.querySelectorAll(".input");
+const message = document.querySelector("#message")
+
 
 
 burger.addEventListener("click",()=>{
@@ -67,3 +69,20 @@ inputs.forEach((input) => {
     input.addEventListener('focus', focusFunc);
     input.addEventListener('blur', blurFunc);
 });
+
+// contact message count
+const handleMessageCount = () => {
+    var msg = document.getElementById("message").value;
+    var msgCount = document.getElementById("message-count")
+    var msgLength = msg.length;
+    const maxLength = 1000;
+    var charLeft = maxLength - msgLength;
+    msgCount.innerText = charLeft;
+  };
+
+message.addEventListener("input", handleMessageCount);
+
+const contactMessage = document.querySelector('.success-message');
+if (window.location.search.includes('success')) {
+  contactMessage.innerHTML = "Thank you for your message, I'll get back to you as soon as I can &#128578;"
+}
