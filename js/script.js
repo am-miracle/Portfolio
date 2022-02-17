@@ -5,7 +5,7 @@ const navLinks = document.querySelectorAll(".nav-links");
 const scrollButton = document.querySelector('.arrow-btn');
 const main = document.querySelector("main");
 const navtab =  document.getElementsByTagName("nav");
-const inputs = document.querySelectorAll(".form-input");
+const inputs = document.querySelectorAll(".input");
 
 
 burger.addEventListener("click",()=>{
@@ -52,19 +52,18 @@ scrollButton.addEventListener('click', function() {
 });
 
 // form animation
-const focusFunc = () => {
+function focusFunc() {
     let parent = this.parentNode;
-    parent.classList.add("focus");
+    parent.classList.add('focus');
 };
-const blurFunc = () => {
+function blurFunc() {
     let parent = this.parentNode;
-    if(this.value === ''){
+    if(this.value === ""){
         parent.classList.remove('focus');
     }
 };
-console.log(classList);
 
 inputs.forEach((input) => {
-    input.addEventListener("focus", focusFunc);
+    input.addEventListener('focus', focusFunc);
     input.addEventListener('blur', blurFunc);
 });
