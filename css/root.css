@@ -2,16 +2,49 @@
 :root.light{
     --box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
 
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+
+    --background-color-black: #0D081B;
+    --background-color-white: #fafafa;
+
+    --text-color-black: #111;
+    --text-color-white: #fff;
+
     --background-color: #fafafa;
-    --text-color: #000;
+    /* --background-color: #000; */
+    /* --text-color: #000; */
+    --text-color: #fff;
     --shade-100: #efefef;
     --shade-300: #8a8a8a;
     --shade-500: #3d3d3d;
     --secondary-color: #ccd0be;
+    --primary: #112e46;
     --grey-color: #c2bfbc;
     --grey-text: #595959;
     --accent-color: #f02d3b;
-    --primary: #112e46;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Roboto', sans-serif;
+    --title-font: 'Lora', serif;
+    --biggest-font-size: 1.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
 
 }
 /* :root.dark {
@@ -24,6 +57,21 @@
     --grey-color: #303f50;
     --grey-text: #cfd8e2;
 } */
+
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 3rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+      --tiny-font-size: .688rem;
+    }
+}
 
 a {
     color: var(--shade-500);
