@@ -224,14 +224,14 @@
     position: relative;
     margin: 1.5rem 0;
 }
-.input{
+.input-container .input{
     width: 100%;
     outline: none;
     border: 2px solid var(--grey-color);
     caret-color: var(--shade-300);
     background: none;
     padding: 1rem 0.5rem;
-    color: var(--text-color);
+    color: var(--text-color-black);
     transition: border 500ms;
     box-sizing: border-box;
     font-size: 1.15rem;
